@@ -69,7 +69,9 @@ export function ThreeRulesBounce() {
       });
 
       // Render frame
-      pre.textContent = frame.map((row) => row.join("")).join("\n");
+      if (pre) {
+        pre.textContent = frame.map((row) => row.join("")).join("\n");
+      }
     }
 
     // Handle window resize
